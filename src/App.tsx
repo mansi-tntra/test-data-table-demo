@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Greeter } from "my-awesome-greeter";
 
+import {MyCounter ,CustomButton} from "@mansi-tntra/typescript-react-package"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>Hello</div>
+      <div>
+        <h2>Default counter</h2>
+         <MyCounter/>
+
+      </div>
+      <hr />
+      <div>
+        <h2>Counter with predefined value</h2>
+        <MyCounter value={5} />
+      </div>
+      <div>
+        <CustomButton
+          disabled={false}
+          buttonText={"Click me"}
+          onClick={() => console.log("HELLO")}
+          type="primary"
+          danger={false}
+          size={"small"}
+          className={""}
+          htmlType={"button"}
+          />
+      </div>
+    </>
   );
 }
 
